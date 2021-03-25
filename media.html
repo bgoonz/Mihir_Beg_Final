@@ -4,7 +4,7 @@
 <head>
 
 
-  
+
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fontfaceobserver/2.1.0/fontfaceobserver.standalone.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
@@ -32,6 +32,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.26/moment-timezone.min.js"
     integrity="sha256-9QeMOhKF5nGXvByLC2BkHmW9JaL6Fn4+YCfhvR0VO2s=" crossorigin="anonymous"></script>
   <script src='https://www.google.com/recaptcha/api.js'></script>
+  <link rel="shortcut icon" type="image/png" href="./images/favicon.ico"/>
   <div id="invisibleRecaptcha"></div>
   <div id="invisibleRecaptchaForgotPassword"></div>
   <div id="invisibleRecaptchaRegistrationSubmit"></div>
@@ -46,12 +47,12 @@
     hfArtist = "Mihir Beg"
   </script>
   <script>
-    function facebookTrackEvent( action ) {
-      if ( typeof fbq != 'undefined' ) {
-        fbq( 'trackCustom', action, {
+    function facebookTrackEvent(action) {
+      if (typeof fbq != 'undefined') {
+        fbq('trackCustom', action, {
           url: location.href
-        } );
-        debug( 'trackCustom: ' + action );
+        });
+        debug('trackCustom: ' + action);
       }
     }
   </script>
@@ -64,20 +65,20 @@
     hyperAlbum.hyperfollowAlbumId = 2134460
     hyperAlbum.artistNameShortcut = "mihirbeg"
     hyperAlbum.albumIdShortcut = "getting-there"
-    hyperAlbum.releaseDateLocalTime = new Date( hyperAlbum.releaseDate );
+    hyperAlbum.releaseDateLocalTime = new Date(hyperAlbum.releaseDate);
     hyperAlbum.releaseDateTimeZoneOffsetInMinutes = hyperAlbum.releaseDateLocalTime.getTimezoneOffset();
-    hyperAlbum.releaseDateLocalTime = moment( hyperAlbum.releaseDateLocalTime ).add( hyperAlbum
-      .releaseDateTimeZoneOffsetInMinutes, 'm' ).toDate();
-    hyperAlbum.minutesUntilLiveInMyLocation = ( hyperAlbum.releaseDateLocalTime - new Date ) / 1000 / 60;
+    hyperAlbum.releaseDateLocalTime = moment(hyperAlbum.releaseDateLocalTime).add(hyperAlbum
+      .releaseDateTimeZoneOffsetInMinutes, 'm').toDate();
+    hyperAlbum.minutesUntilLiveInMyLocation = (hyperAlbum.releaseDateLocalTime - new Date) / 1000 / 60;
   </script>
   <script>
     function deleteOrRestoreThisPage() {
-      sweetAlertConfirm( 'Hide page. Are you sure?', 'You can unhide it any time.', function () {
-        deleteOrRestoreThisPageReally( 'delete' )
-      }, function () { }, 'warning', 'Hide', 'Don\'t hide', 'redbg' );
+      sweetAlertConfirm('Hide page. Are you sure?', 'You can unhide it any time.', function () {
+        deleteOrRestoreThisPageReally('delete')
+      }, function () { }, 'warning', 'Hide', 'Don\'t hide', 'redbg');
     }
 
-    function deleteOrRestoreThisPageReally( action ) {
+    function deleteOrRestoreThisPageReally(action) {
       window.location.href = '/hyperfollow/hide/?id=2134460&stuff=E6084C876E7D1595F7B0273C235FC04B&action=' + action;
     }
   </script>
@@ -100,34 +101,34 @@
 <!-- begin: google analytics OLD -->
 <script type="text/javascript">
   var _gaq = _gaq || [];
-  _gaq.push( [ '_setAccount', 'UA-42863460-1' ] );
-  _gaq.push( [ '_setDomainName', 'distrokid.com' ] );
-  _gaq.push( [ '_trackPageview' ] );
-  ( function () {
-    var ga = document.createElement( 'script' );
+  _gaq.push(['_setAccount', 'UA-42863460-1']);
+  _gaq.push(['_setDomainName', 'distrokid.com']);
+  _gaq.push(['_trackPageview']);
+  (function () {
+    var ga = document.createElement('script');
     ga.type = 'text/javascript';
     ga.async = true;
-    ga.src = ( 'https:' == document.location.protocol ? 'https://' : 'http://' ) + 'stats.g.doubleclick.net/dc.js';
-    var s = document.getElementsByTagName( 'script' )[ 0 ];
-    s.parentNode.insertBefore( ga, s );
-  } )();
+    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(ga, s);
+  })();
 </script>
 <!-- end: google analytics OLD -->
 <script>
-  ( function ( i, s, o, g, r, a, m ) {
-    i[ 'GoogleAnalyticsObject' ] = r;
-    i[ r ] = i[ r ] || function () {
-      ( i[ r ].q = i[ r ].q || [] ).push( arguments )
-    }, i[ r ].l = 1 * new Date();
-    a = s.createElement( o ),
-      m = s.getElementsByTagName( o )[ 0 ];
+  (function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r;
+    i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date();
+    a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0];
     a.async = 1;
     a.src = g;
-    m.parentNode.insertBefore( a, m )
-  } )( window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga' );
-  ga( 'create', 'UA-42863460-1', 'auto' );
-  ga( 'set', 'anonymizeIp', true ); // GDPR doesn't allow google to collect IPs.
-  ga( 'send', 'pageview' );
+    m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+  ga('create', 'UA-42863460-1', 'auto');
+  ga('set', 'anonymizeIp', true); // GDPR doesn't allow google to collect IPs.
+  ga('send', 'pageview');
 </script>
 <script>
   captchaSiteKey = "6Ld_vDcUAAAAABBf4b4MfIPqz5XA53JWQyOh6MX0";
@@ -559,85 +560,85 @@ onclick = "registrationSubmitCaptcha(this, registrationForm);">
 </script>
 <script>
   function submitHyperfollowRegistration() {
-    registrationSubmitCaptcha( $j( '#registerButton' ), registrationForm );
+    registrationSubmitCaptcha($j('#registerButton'), registrationForm);
   }
 
   function conversateLoggedOut() {
-    debug( 'conversateLoggedOut()' );
-    var hyperfollowFollowNotLoggedInTemplate = $j( '#hyperfollowFollowNotLoggedInTemplate' ).html();
-    hyperfollowFollowNotLoggedInTemplate = hyperfollowFollowNotLoggedInTemplate.replace( /\[hfArtist\]/gi, hfArtist );
-    Swal.fire( {
+    debug('conversateLoggedOut()');
+    var hyperfollowFollowNotLoggedInTemplate = $j('#hyperfollowFollowNotLoggedInTemplate').html();
+    hyperfollowFollowNotLoggedInTemplate = hyperfollowFollowNotLoggedInTemplate.replace(/\[hfArtist\]/gi, hfArtist);
+    Swal.fire({
       title: 'Well, hello there.',
       confirmButtonText: 'Start conversation',
       focusConfirm: false,
       showLoaderOnConfirm: true,
       showConfirmButton: false,
       html: hyperfollowFollowNotLoggedInTemplate
-    } ).then( ( result ) => {
+    }).then((result) => {
       submitHyperfollowRegistration();
-    } )
+    })
     // begin: customize registration form 
-    $j( '.homeFormInputContainer' ).css( 'margin-top', '3px' ).removeClass( 'homeFormInputContainer' );
-    $j( '.homeFormInput' ).addClass( 'coolInput' ).removeClass( 'homeFormInput' );
-    $j( '#registerButton' ).removeClass( 'button' ).removeClass( 'register-button' ).addClass( 'buttonRounded' ).val(
-      'Start Conversation' );
-    $j( '#registerButton' ).parent( 'div' ).css( 'text-align', 'center' ).css( 'padding-top', '1em' );
-    $j( '.hfRegForm' ).find( '.coolInput' ).css( 'width', 'auto' );
+    $j('.homeFormInputContainer').css('margin-top', '3px').removeClass('homeFormInputContainer');
+    $j('.homeFormInput').addClass('coolInput').removeClass('homeFormInput');
+    $j('#registerButton').removeClass('button').removeClass('register-button').addClass('buttonRounded').val(
+      'Start Conversation');
+    $j('#registerButton').parent('div').css('text-align', 'center').css('padding-top', '1em');
+    $j('.hfRegForm').find('.coolInput').css('width', 'auto');
     // end: customize registration form 
   }
 
-  function spotifyError( msg ) {
-    alert( msg );
+  function spotifyError(msg) {
+    alert(msg);
   }
 
-  function spotifyFollow( obj ) {
-    obj.artistNameShortcut = $j( '#presaveArtistNameShortcut' ).val();
-    obj.albumIdShortcut = $j( '#presaveAlbumId' ).val();
-    obj.spotifyShareEmail = $j( '#spotifyShareEmail' ).is( ':checked' );
-    debug( 'obj' );
-    debug( obj );
+  function spotifyFollow(obj) {
+    obj.artistNameShortcut = $j('#presaveArtistNameShortcut').val();
+    obj.albumIdShortcut = $j('#presaveAlbumId').val();
+    obj.spotifyShareEmail = $j('#spotifyShareEmail').is(':checked');
+    debug('obj');
+    debug(obj);
     // $j('.spotifyPleaseWait').show();
-    $j( '.spotifyRightArrows' ).removeClass( 'fa-angle-double-right' );
-    $j( '.spotifyRightArrows' ).addClass( 'fa-cog' );
-    $j( '.spotifyRightArrows' ).addClass( 'fa-spin' );
-    var myPost = $j.post( '/api/presaveSpotify/', obj, function ( response ) {
-      debug( 'my response:' );
-      debug( response );
+    $j('.spotifyRightArrows').removeClass('fa-angle-double-right');
+    $j('.spotifyRightArrows').addClass('fa-cog');
+    $j('.spotifyRightArrows').addClass('fa-spin');
+    var myPost = $j.post('/api/presaveSpotify/', obj, function (response) {
+      debug('my response:');
+      debug(response);
       // $j('.spotifyNotConnected').hide();
       // $j('.spotifyPleaseWait').hide(); /* THESE THREE LINES EMBED
       // $j('.spotifyConnected').show(); A PLAYER ON THIS PAGE. */
-      if ( typeof spotifyReleaseUri != 'undefined' ) {
+      if (typeof spotifyReleaseUri != 'undefined') {
         // we're forwarding the user to Spotify's website 
-        $j( '.spotifyRightArrows' ).removeClass( 'fa-angle-double-right' );
-        $j( '.spotifyRightArrows' ).addClass( 'fa-cog' );
-        $j( '.spotifyRightArrows' ).addClass( 'fa-spin' );
-        window.location.href = "https://open.spotify.com/album/" + spotifyReleaseUri.split( ":" )[ 2 ];
+        $j('.spotifyRightArrows').removeClass('fa-angle-double-right');
+        $j('.spotifyRightArrows').addClass('fa-cog');
+        $j('.spotifyRightArrows').addClass('fa-spin');
+        window.location.href = "https://open.spotify.com/album/" + spotifyReleaseUri.split(":")[2];
       } else {
         // user just did a pre-save 
-        debug( 'pre-saved!' );
-        facebookTrackEvent( 'spotifyPresaveSuccess' );
-        $j( '.spotifyPresaveWords' ).html(
-          '<i class="fa fa-check-circle" aria-hidden="true" style="margin-right:5px;"></i>Done! Pre-Saved.' );
-        $j( '.spotifyPresaveEmail' ).hide();
+        debug('pre-saved!');
+        facebookTrackEvent('spotifyPresaveSuccess');
+        $j('.spotifyPresaveWords').html(
+          '<i class="fa fa-check-circle" aria-hidden="true" style="margin-right:5px;"></i>Done! Pre-Saved.');
+        $j('.spotifyPresaveEmail').hide();
       }
-    }, 'json' )
-    myPost.error( function () {
-      $j( '.spotifyPleaseWait' ).hide();
-      setTimeout( function () {
-        alert( 'Doh! That didn\'t work. Please try again.' );
-      }, 100 )
-    } )
+    }, 'json')
+    myPost.error(function () {
+      $j('.spotifyPleaseWait').hide();
+      setTimeout(function () {
+        alert('Doh! That didn\'t work. Please try again.');
+      }, 100)
+    })
   }
 </script>
 <script>
   function slideOut() {
-    if ( $j( '.slideOut' ).hasClass( 'slideOutEngaged' ) ) {
-      $j( '.slideOut' ).removeClass( 'slideOutEngaged' );
-      $j( '.slideOutMenu' ).removeClass( 'slideOutMenuEngaged' );
+    if ($j('.slideOut').hasClass('slideOutEngaged')) {
+      $j('.slideOut').removeClass('slideOutEngaged');
+      $j('.slideOutMenu').removeClass('slideOutMenuEngaged');
       // $j('.slideOutMenu').hide();
     } else {
-      $j( '.slideOut' ).addClass( 'slideOutEngaged' );
-      $j( '.slideOutMenu' ).addClass( 'slideOutMenuEngaged' );
+      $j('.slideOut').addClass('slideOutEngaged');
+      $j('.slideOutMenu').addClass('slideOutMenuEngaged');
       // $j('.slideOutMenu').show();
     }
   }
@@ -665,7 +666,7 @@ onclick = "registrationSubmitCaptcha(this, registrationForm);">
               </div>
             </div>
             <script>
-              fitty( '.fitty', {} );
+              fitty('.fitty', {});
             </script>
           </div>
         </div>
@@ -854,52 +855,52 @@ onclick = "registrationSubmitCaptcha(this, registrationForm);">
     fitty.fitAll();
   }
 
-  function hyperfollowOpenFullImage( obj ) {
-    var myTemplate = $j( '#hyperFullImageTemplate' ).html();
-    facebookTrackEvent( 'showFullImage' );
-    if ( typeof $j( obj ).attr( 'full-image' ) != 'undefined' ) {
-      var myImage = $j( obj ).attr( 'full-image' );
+  function hyperfollowOpenFullImage(obj) {
+    var myTemplate = $j('#hyperFullImageTemplate').html();
+    facebookTrackEvent('showFullImage');
+    if (typeof $j(obj).attr('full-image') != 'undefined') {
+      var myImage = $j(obj).attr('full-image');
     } else {
-      var myImage = $j( obj ).attr( 'src' );
+      var myImage = $j(obj).attr('src');
     }
-    myTemplate = myTemplate.replace( /\[imageUrl\]/gi, myImage );
-    $j( "body" ).addClass( "modal-open" ); // freezes body so user can't scroll 
-    $j( "body" ).prepend( myTemplate );
+    myTemplate = myTemplate.replace(/\[imageUrl\]/gi, myImage);
+    $j("body").addClass("modal-open"); // freezes body so user can't scroll 
+    $j("body").prepend(myTemplate);
     // moveModalCloseButton(); // doesn't work because sometimes image slow to load & offset gets messed up
   }
 
   function hyperfollowCloseFullImage() {
-    $j( '.slapsImageModalBackground' ).hide();
-    $j( '.slapsFullImage' ).off( 'clickoutside' );
-    $j( "body" ).removeClass( "modal-open" ); // unfreezes body, so user can scroll 
+    $j('.slapsImageModalBackground').hide();
+    $j('.slapsFullImage').off('clickoutside');
+    $j("body").removeClass("modal-open"); // unfreezes body, so user can scroll 
   }
 
   function fixFittyWhenCustomFontLoads() {
     // begin: wait for custom font to load, then run fixFitty()
-    var font = new FontFaceObserver( 'Lato3', {
+    var font = new FontFaceObserver('Lato3', {
       weight: 700,
       observeMutations: true
-    } );
-    font.load().then( function () {
+    });
+    font.load().then(function () {
       // font is available 
-      console.log( 'Font is available' );
+      console.log('Font is available');
       fixFitty();
     }, function () {
       // font is not available 
-      console.log( 'Font is not available' );
-    } );
+      console.log('Font is not available');
+    });
     // end: wait for custom font to load, then run fixFitty()
   }
-  $j( document ).ready( function () {
-    if ( typeof getUrlVars().auto != 'undefined' ) {
-      var followData = JSON.parse( getUrlVars().auto );
+  $j(document).ready(function () {
+    if (typeof getUrlVars().auto != 'undefined') {
+      var followData = JSON.parse(getUrlVars().auto);
       followData.calledFrom = 'webroot/hyperfollow/page/index.cfm';
-      spotifyFollow( followData );
+      spotifyFollow(followData);
     }
-    $j( '.slideOutMenu' ).height( $j( document ).height() ) // helps height of slideOut nav 
+    $j('.slideOutMenu').height($j(document).height()) // helps height of slideOut nav 
     fixFitty();
     fixFittyWhenCustomFontLoads();
-  } )
+  })
   window.onload = function () {
     fixFitty();
   }
