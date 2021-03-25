@@ -26,6 +26,16 @@
     <link rel="stylesheet" href="styles/colors/color-caqui.css" />
     <link rel="stylesheet" href="styles/colors/color-red.css" />
     <script src="scripts/vendor/modernizr.js"></script>
+    <style>
+ body{
+       body {
+    background: url("./images/background.mp4")
+       -ms-overflow-style: scrollbar;
+       zoom:0.73;
+       }
+    
+      }
+    </style>
   </head>
 
   <body data-spy="scroll" data-target="#navbar-muziq" data-offset="80">
@@ -90,6 +100,10 @@
     </header>
     <!-- INTRO -->
     <section class=" intro full-width jIntro" id="anchor00">
+      <div class='vidContain'>
+         <div class='vid'>
+           <video controls="" preload="none" poster="./images/poster.png" style="width:100%; height:100%">
+             <source id="mp4" src="./images/background.mp4" type="video/mp4" />
                 <div class="container">
                   <div class="row">
                     <div class="col-md-12">
@@ -105,105 +119,13 @@
                     </div>
                   </div>
                   <div class="vcenter text-center text-overlay">
-                    <!-- <svg
-            xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
-            style="margin: auto; background: #fff; display: block"
-            width="200px"
-            height="200px"
-            viewBox="0 0 100 100"
-            preserveAspectRatio="xMidYMid"
-          >
-            <path
-              transform="translate(30,130)"
-              fill="#e15b64"
-              d="M6.999-2.173c-0.21-1.843-1.216-3.542-2.21-5.061C4.291-7.995,3.814-8.771,3.242-9.477 c-0.389-0.479-0.799-0.955-0.985-1.554c-0.13-0.42,0.033-1.539-0.704-1.467c-0.359,0.035-0.418,0.337-0.471,0.621 c-0.072,0.38,0,0.842,0,1.227c0,4.1,0,8.199,0,12.299c0,1.247,0,2.495,0,3.742c-2.884-1.873-8.377,1.23-8.197,4.705 c0.091,1.754,1.807,2.481,3.362,2.395c1.974-0.108,3.983-1.249,5.113-2.868c1-1.434,0.769-3.163,0.769-4.822 c0-2.398,0-4.797,0-7.195c0-1.72,0-3.439,0-5.159c1.769,2.454,4.472,4.668,4.002,8.037C6.038,1.149,5.681,1.832,5.665,2.494 C5.639,3.53,6.145,2.799,6.343,2.349C6.99,0.875,7.253-0.575,6.999-2.173z"
-            >
-              <animatetransform
-                attributeName="transform"
-                type="translate"
-                keyTimes="0;0;0.2;0.4;1"
-                values="30 130;30 130;30 50;30 130;30 130;"
-                keySplines="0 0 1 1;0 0.5 0.5 1;0.5 0 1 0.5;0 0 1 1"
-                calcMode="spline"
-                dur="1.7857142857142856s"
-                repeatCount="indefinite"
-                begin="-0.8928571428571428s"
-              ></animatetransform>
-            </path>
-            <path
-              transform="translate(70,20)"
-              fill="#f47e60"
-              d="M6.999-2.173c-0.21-1.843-1.216-3.542-2.21-5.061C4.291-7.995,3.814-8.771,3.242-9.477 c-0.389-0.479-0.799-0.955-0.985-1.554c-0.13-0.42,0.033-1.539-0.704-1.467c-0.359,0.035-0.418,0.337-0.471,0.621 c-0.072,0.38,0,0.842,0,1.227c0,4.1,0,8.199,0,12.299c0,1.247,0,2.495,0,3.742c-2.884-1.873-8.377,1.23-8.197,4.705 c0.091,1.754,1.807,2.481,3.362,2.395c1.974-0.108,3.983-1.249,5.113-2.868c1-1.434,0.769-3.163,0.769-4.822 c0-2.398,0-4.797,0-7.195c0-1.72,0-3.439,0-5.159c1.769,2.454,4.472,4.668,4.002,8.037C6.038,1.149,5.681,1.832,5.665,2.494 C5.639,3.53,6.145,2.799,6.343,2.349C6.99,0.875,7.253-0.575,6.999-2.173z"
-            >
-              <animatetransform
-                attributeName="transform"
-                type="translate"
-                keyTimes="0;0.1;0.4;0.7;1"
-                values="70 130;70 130;70 20;70 130;70 130;"
-                keySplines="0 0 1 1;0 0.5 0.5 1;0.5 0 1 0.5;0 0 1 1"
-                calcMode="spline"
-                dur="1.7857142857142856s"
-                repeatCount="indefinite"
-                begin="-0.8928571428571428s"
-              ></animatetransform>
-            </path>
-            <path
-              transform="translate(40,60)"
-              fill="#f8b26a"
-              d="M10.988-11.314c-0.201-0.914-2.865,0.152-3.31,0.255c-2.865,0.661-5.73,1.322-8.594,1.983 C-1.873-8.855-2.84-8.658-3.791-8.413c-0.481,0.124-0.664,0.217-0.719,0.77c-0.18,1.819,0,3.786,0,5.621c0,2.663,0,5.325,0,7.988 c-2.146-1.278-5.411,0.577-6.269,2.683c-1.074,2.636,1.925,3.462,3.907,2.736c1.954-0.715,3.253-2.269,3.343-4.333 c0.046-1.037,0-2.087,0-3.125c0-1.638,0-3.276,0-4.914c0-0.673,0-1.346,0-2.019c0-0.215-0.116-0.848,0-1.036 c0.17-0.277,1.196-0.348,1.535-0.427c1.425-0.329,2.849-0.657,4.274-0.986c2.579-0.595,5.158-1.19,7.737-1.786 c0,3.284,0,6.569,0,9.853c-1.64-0.977-3.949-0.013-5.2,1.179c-0.958,0.913-1.87,2.579-0.84,3.778 c1.198,1.393,3.567,0.71,4.866-0.135C10.164,6.578,10.936,5.347,11,3.788c0.148-3.605,0-7.245,0-10.853c0-0.415,0-0.829,0-1.244 C11-9.247,11.189-10.396,10.988-11.314z"
-            >
-              <animatetransform
-                attributeName="transform"
-                type="translate"
-                keyTimes="0;0.3;0.6;0.9;1"
-                values="40 130;40 130;40 60;40 130;40 130;"
-                keySplines="0 0 1 1;0 0.5 0.5 1;0.5 0 1 0.5;0 0 1 1"
-                calcMode="spline"
-                dur="1.7857142857142856s"
-                repeatCount="indefinite"
-                begin="-0.8928571428571428s"
-              ></animatetransform>
-            </path>
-            <path
-              transform="translate(60,130)"
-              fill="#e15b64"
-              d="M6.999-2.173c-0.21-1.843-1.216-3.542-2.21-5.061C4.291-7.995,3.814-8.771,3.242-9.477 c-0.389-0.479-0.799-0.955-0.985-1.554c-0.13-0.42,0.033-1.539-0.704-1.467c-0.359,0.035-0.418,0.337-0.471,0.621 c-0.072,0.38,0,0.842,0,1.227c0,4.1,0,8.199,0,12.299c0,1.247,0,2.495,0,3.742c-2.884-1.873-8.377,1.23-8.197,4.705 c0.091,1.754,1.807,2.481,3.362,2.395c1.974-0.108,3.983-1.249,5.113-2.868c1-1.434,0.769-3.163,0.769-4.822 c0-2.398,0-4.797,0-7.195c0-1.72,0-3.439,0-5.159c1.769,2.454,4.472,4.668,4.002,8.037C6.038,1.149,5.681,1.832,5.665,2.494 C5.639,3.53,6.145,2.799,6.343,2.349C6.99,0.875,7.253-0.575,6.999-2.173z"
-            >
-              <animatetransform
-                attributeName="transform"
-                type="translate"
-                keyTimes="0;0.5;0.75;1;1"
-                values="60 130;60 130;60 70;60 130;60 130;"
-                keySplines="0 0 1 1;0 0.5 0.5 1;0.5 0 1 0.5;0 0 1 1"
-                calcMode="spline"
-                dur="1.7857142857142856s"
-                repeatCount="indefinite"
-                begin="-0.8928571428571428s"
-              ></animatetransform>
-            </path>
-            <path
-              transform="translate(50,130)"
-              fill="#abbd81"
-              d="M10.988-11.314c-0.201-0.914-2.865,0.152-3.31,0.255c-2.865,0.661-5.73,1.322-8.594,1.983 C-1.873-8.855-2.84-8.658-3.791-8.413c-0.481,0.124-0.664,0.217-0.719,0.77c-0.18,1.819,0,3.786,0,5.621c0,2.663,0,5.325,0,7.988 c-2.146-1.278-5.411,0.577-6.269,2.683c-1.074,2.636,1.925,3.462,3.907,2.736c1.954-0.715,3.253-2.269,3.343-4.333 c0.046-1.037,0-2.087,0-3.125c0-1.638,0-3.276,0-4.914c0-0.673,0-1.346,0-2.019c0-0.215-0.116-0.848,0-1.036 c0.17-0.277,1.196-0.348,1.535-0.427c1.425-0.329,2.849-0.657,4.274-0.986c2.579-0.595,5.158-1.19,7.737-1.786 c0,3.284,0,6.569,0,9.853c-1.64-0.977-3.949-0.013-5.2,1.179c-0.958,0.913-1.87,2.579-0.84,3.778 c1.198,1.393,3.567,0.71,4.866-0.135C10.164,6.578,10.936,5.347,11,3.788c0.148-3.605,0-7.245,0-10.853c0-0.415,0-0.829,0-1.244 C11-9.247,11.189-10.396,10.988-11.314z"
-            >
-              <animatetransform
-                attributeName="transform"
-                type="translate"
-                keyTimes="0;0;0.4;0.8;1"
-                values="50 130;50 130;50 20;50 130;50 130;"
-                keySplines="0 0 1 1;0 0.5 0.5 1;0.5 0 1 0.5;0 0 1 1"
-                calcMode="spline"
-                dur="1.7857142857142856s"
-                repeatCount="indefinite"
-                begin="0s"
-              ></animatetransform>
-            </path>
-          </svg> -->
+                  
                     <div class="logo-intro">
                       <img src="images/demo/logo-intro.png" alt="" />
                     </div>
-                    <div id="owl-main-text" class="owl-carousel">
+          
+                    <div id="owl-main-text" class="owl-carousel"
+                      style="position: fixed; top: 0; width: 100%; height: 100%; z-index: -1;">
                       <div class="item">
                         <h1 class="primary-title"></h1>
                       </div>
@@ -216,13 +138,14 @@
                     <a href="./about.html" class="btn btn-invert">Learn more</a>
                   </div>
                 </div>
+                </div>
                 </section>
                 <!-- PLAYER -->
                 <div class="fullscreen-bg">
-                  <video loop muted autoplay poster="img/videoframe.jpg" class="fullscreen-bg__video">
-                    <source src="./images/ezgif.com-gif-maker.mp4" type="video/webm">
+                  <!-- <video loop muted autoplay poster="img/videoframe.jpg" class="fullscreen-bg__video">
+                    <source src="./images/ezgif.com-gif-maker.mp4" type="video/webm"> -->
 
-                  </video>
+                  <!-- </video> -->
                   <div class="player horizontal">
                     <div class="container">
                       <div class="info-album-player">
@@ -234,7 +157,7 @@
                         <audio preload></audio>
                         <ol class="playlist">
                           <li>
-                            <a href="#" data-src="mp3/stay-calm.mp3">Stay Calm</a>
+                            <a href="#" data-src="./mp3/Look Calm.mp3">Stay Calm</a>
                           </li>
                           <li>
                             <a href="#" data-src="mp3/02Metal_Music_by_AndyWarner_preview.mp3">on fire</a>
@@ -431,6 +354,42 @@
                               <li><i class="fa fa-phone"></i>(201) 566-0215</li>
                               <li><i class="fa fa-envelope"></i> https://mihirbeg.com/</li>
                             </ul>
+                            <a tccltracking="click" rel="noopener" data-ux-btn="external" data-ux="ButtonExternal"
+                              href="https://wa.me/12015660215" target="_blank" data-aid="CONTACT_INFO_WHATS_APP_REND"
+                              data-tccl="ux2.contact.whatsapp.click,click" icon="whatsApp" data-typography="false"
+                              class="x-el x-el-a c1-9d c1-6g c1-c c1-3v c1-9e c1-9f c1-78 c1-9g c1-17 c1-5s c1-4c c1-6d c1-6e c1-6f c1-9h c1-9i c1-9j c1-9k c1-9l c1-9m c1-10 c1-9n c1-18 c1-1i c1-z c1-1e c1-1d c1-s c1-33 c1-9o c1-v c1-w c1-9p c1-9q c1-1 c1-2 c1-9r c1-9s c1-9t c1-9u c1-9v c1-9w c1-9x c1-9y c1-9z c1-a0 c1-a1"><span
+                                data-ux="Element" class="x-el x-el-span c1-c c1-9e c1-s c1-a2 c1-2s c1-6a c1-6b"><span
+                                  data-ux="Element"
+                                  class="x-el x-el-span c1-a3 c1-a4 c1-41 c1-a5 c1-4q c1-a6 c1-a7 c1-a8 c1-a9 c1-9e c1-c"><svg
+                                    viewBox="0 0 24 24" fill="currentColor" width="24px" height="24px" data-ux="Icon"
+                                    class="x-el x-el-svg c1-7c c1-30 c1-4u c1-9e c1-c"><svg viewBox="0 0 496 497">
+                                      <defs>
+                                        <linearGradient id="a" x1="247.32" x2="247.32" y1="446.09" y2="39.9"
+                                          gradientUnits="userSpaceOnUse">
+                                          <stop offset="0" stop-color="#20b038"></stop>
+                                          <stop offset="1" stop-color="#60d66a"></stop>
+                                        </linearGradient>
+                                        <linearGradient id="b" x1="247.32" x2="247.32" y1="453.37" y2="32.61"
+                                          gradientUnits="userSpaceOnUse">
+                                          <stop offset="0" stop-color="#f9f9f9"></stop>
+                                          <stop offset="1" stop-color="#fff"></stop>
+                                        </linearGradient>
+                                      </defs>
+                                      <path
+                                        d="M37.88 453.37l29.59-108A208 208 0 0 1 39.63 241.1c0-115 93.6-208.49 208.56-208.49a208.57 208.57 0 0 1 208.57 208.66c-.05 115-93.62 208.49-208.57 208.49h-.08a208.41 208.41 0 0 1-99.67-25.38zm115.68-66.73l6.34 3.75a173.18 173.18 0 0 0 88.23 24.16h.06c95.55 0 173.31-77.75 173.35-173.3A173.34 173.34 0 0 0 248.26 67.83c-95.62 0-173.38 77.73-173.42 173.28a172.94 172.94 0 0 0 26.5 92.23l4.13 6.55L88 403.84z">
+                                      </path>
+                                      <path fill="url(#a)"
+                                        d="M45.13 446.09l28.57-104.3a200.82 200.82 0 0 1-26.88-100.62c0-111 90.36-201.27 201.34-201.27A201.35 201.35 0 0 1 449.5 241.32c0 111-90.37 201.28-201.33 201.28h-.09a201.31 201.31 0 0 1-96.21-24.49z">
+                                      </path>
+                                      <path fill="url(#b)"
+                                        d="M37.88 453.37l29.59-108A208 208 0 0 1 39.63 241.1c0-115 93.6-208.49 208.56-208.49a208.57 208.57 0 0 1 208.57 208.66c-.05 115-93.62 208.49-208.57 208.49h-.08a208.41 208.41 0 0 1-99.67-25.38zm115.68-66.73l6.34 3.75a173.18 173.18 0 0 0 88.23 24.16h.06c95.55 0 173.31-77.75 173.35-173.3A173.34 173.34 0 0 0 248.26 67.83c-95.62 0-173.38 77.73-173.42 173.28a172.94 172.94 0 0 0 26.5 92.23l4.13 6.55L88 403.84z">
+                                      </path>
+                                      <path fill="#fff"
+                                        d="M196.07 153.94c-3.91-8.68-8-8.85-11.73-9-3-.14-6.51-.13-10-.13a19.15 19.15 0 0 0-13.89 6.52c-4.78 5.22-18.24 17.82-18.24 43.46s18.67 50.42 21.28 53.9 36.05 57.77 89 78.66c44 17.36 53 13.91 62.53 13s30.83-12.61 35.18-24.78 4.34-22.59 3-24.77-4.78-3.48-10-6.08-30.83-15.22-35.61-16.95-8.25-2.61-11.73 2.61-13.45 16.94-16.5 20.42-6.08 3.92-11.29 1.31-22-8.11-41.9-25.86c-15.5-13.82-26-30.87-29-36.09s-.32-8 2.29-10.63c2.34-2.34 5.21-6.09 7.82-9.13s3.47-5.21 5.21-8.69.87-6.52-.44-9.13-11.35-28.34-15.98-38.64z">
+                                      </path>
+                                    </svg></svg></span><span data-ux="Element"
+                                  class="x-el x-el-span iconText c1-c c1-9e c1-3a c1-1i c1-aa c1-2s c1-6a c1-6b">Message
+                                  us on WhatsApp</span></span></a>
                             <h4 class="title small"></h4>
                             <ul class="social-links">
                               <li>
@@ -462,10 +421,12 @@
                   }
                   gtag( "js", new Date() );
                   gtag( "config", "G-P8DYTHHPE9" );
+
                 </script>
                 <script src="scripts/plugins.js"></script>
                 <script src="scripts/main.js"></script>
                 <script src="scripts/colorpicker.js"></script>
                 <script src="scripts/vendor/bootstrap.js"></script>
   </body>
+
 </html>
