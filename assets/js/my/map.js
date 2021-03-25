@@ -1,7 +1,7 @@
 /* ==============================================
     MAP -->
     =============================================== */
-(function ($) {
+( function ( $ ) {
   "use strict";
   var locations = [
     [
@@ -11,46 +11,38 @@
       2,
     ],
   ];
-  var map = new google.maps.Map(document.getElementById("map"), {
+  var map = new google.maps.Map( document.getElementById( "map" ), {
     zoom: 12,
     scrollwheel: false,
     navigationControl: true,
     mapTypeControl: false,
     scaleControl: false,
     draggable: true,
-    styles: [
-      {
+    styles: [ {
         featureType: "administrative",
         elementType: "labels.text.fill",
-        stylers: [
-          {
-            color: "#444444",
-          },
-        ],
+        stylers: [ {
+          color: "#444444",
+        }, ],
       },
       {
         featureType: "landscape",
         elementType: "all",
-        stylers: [
-          {
-            color: "#f2f2f2",
-          },
-        ],
+        stylers: [ {
+          color: "#f2f2f2",
+        }, ],
       },
       {
         featureType: "poi",
         elementType: "all",
-        stylers: [
-          {
-            visibility: "off",
-          },
-        ],
+        stylers: [ {
+          visibility: "off",
+        }, ],
       },
       {
         featureType: "road",
         elementType: "all",
-        stylers: [
-          {
+        stylers: [ {
             saturation: -100,
           },
           {
@@ -61,35 +53,28 @@
       {
         featureType: "road.highway",
         elementType: "all",
-        stylers: [
-          {
-            visibility: "simplified",
-          },
-        ],
+        stylers: [ {
+          visibility: "simplified",
+        }, ],
       },
       {
         featureType: "road.arterial",
         elementType: "labels.icon",
-        stylers: [
-          {
-            visibility: "off",
-          },
-        ],
+        stylers: [ {
+          visibility: "off",
+        }, ],
       },
       {
         featureType: "transit",
         elementType: "all",
-        stylers: [
-          {
-            visibility: "off",
-          },
-        ],
+        stylers: [ {
+          visibility: "off",
+        }, ],
       },
       {
         featureType: "water",
         elementType: "all",
-        stylers: [
-          {
+        stylers: [ {
             color: "#01bacf",
           },
           {
@@ -98,26 +83,26 @@
         ],
       },
     ],
-    center: new google.maps.LatLng(40.76788, -74.0163),
+    center: new google.maps.LatLng( 40.76788, -74.0163 ),
     mapTypeId: google.maps.MapTypeId.ROADMAP,
-  });
+  } );
   var infowindow = new google.maps.InfoWindow();
   var marker, i;
-  for (i = 0; i < locations.length; i++) {
-    marker = new google.maps.Marker({
-      position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+  for ( i = 0; i < locations.length; i++ ) {
+    marker = new google.maps.Marker( {
+          position: new google.maps.LatLng( locations[ i ][ 1 ], locations[ i ][ 2 ] ),
       map: map,
       icon: "images/apple-touch-icon.png",
-    });
+    } );
     google.maps.event.addListener(
       marker,
       "click",
-      (function (marker, i) {
+      ( function ( marker, i ) {
         return function () {
-          infowindow.setContent(locations[i][0]);
-          infowindow.open(map, marker);
+          infowindow.setContent( locations[ i ][ 0 ] );
+          infowindow.open( map, marker );
         };
-      })(marker, i)
+      } )( marker, i )
     );
   }
-})(jQuery);
+} )( jQuery );

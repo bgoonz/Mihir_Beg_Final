@@ -13,9 +13,9 @@
       };
     },
     g = [].indexOf ||
-      function ( a ) {
-        for ( var b = 0, c = this.length; c > b; b++ )
-          if ( b in this && this[ b ] === a ) return b;
+    function ( a ) {
+      for ( var b = 0, c = this.length; c > b; b++ )
+        if ( b in this && this[ b ] === a ) return b;
       return -1;
     };
   ( b = ( function () {
@@ -35,14 +35,14 @@
         var e;
         return (
           null == b && ( b = !1 ),
-            null == c && ( c = !1 ),
-            null == d && ( d = null ),
-            null != document.createEvent ?
-            ( ( e = document.createEvent( "CustomEvent" ) ),
-              e.initCustomEvent( a, b, c, d ) ) :
-            null != document.createEventObject ?
-            ( ( e = document.createEventObject() ), ( e.eventType = a ) ) :
-            ( e.eventName = a ),
+          null == c && ( c = !1 ),
+          null == d && ( d = null ),
+          null != document.createEvent ?
+          ( ( e = document.createEvent( "CustomEvent" ) ),
+            e.initCustomEvent( a, b, c, d ) ) :
+          null != document.createEventObject ?
+          ( ( e = document.createEventObject() ), ( e.eventType = a ) ) :
+          ( e.eventName = a ),
           e
         );
       } ),
@@ -89,17 +89,17 @@
           var b, c, d, e, f;
           for ( f = this.keys, b = d = 0, e = f.length; e > d; b = ++d )
             if ( ( ( c = f[ b ] ), c === a ) ) return this.values[ b ];
-          } ),
-          ( a.prototype.set = function ( a, b ) {
+        } ),
+        ( a.prototype.set = function ( a, b ) {
           var c, d, e, f, g;
           for ( g = this.keys, c = e = 0, f = g.length; f > e; c = ++e )
             if ( ( ( d = g[ c ] ), d === a ) ) return void( this.values[ c ] = b );
           return this.keys.push( a ), this.values.push( b );
-          } ),
+        } ),
         a
       );
     } )() ) ),
-    ( a =
+  ( a =
     this.MutationObserver ||
     this.WebkitMutationObserver ||
     this.MozMutationObserver ||
@@ -115,8 +115,8 @@
           );
       }
       return ( a.notSupported = !0 ), ( a.prototype.observe = function () {} ), a;
-      } )() ) ),
-      ( d =
+    } )() ) ),
+  ( d =
     this.getComputedStyle ||
     function ( a, b ) {
       return (
@@ -124,8 +124,8 @@
           var c;
           return (
             "float" === b && ( b = "styleFloat" ),
-              e.test( b ) &&
-              b.replace( e, function ( a, b ) {
+            e.test( b ) &&
+            b.replace( e, function ( a, b ) {
               return b.toUpperCase();
             } ),
             ( null != ( c = a.currentStyle ) ? c[ b ] : void 0 ) || null
@@ -134,16 +134,16 @@
         this
       );
     } ),
-    ( e = /(\-([a-z]){1})/g ),
-    ( this.WOW = ( function () {
-          function e( a ) {
-            null == a && ( a = {} ),
-              ( this.scrollCallback = f( this.scrollCallback, this ) ),
-              ( this.scrollHandler = f( this.scrollHandler, this ) ),
-              ( this.resetAnimation = f( this.resetAnimation, this ) ),
-              ( this.start = f( this.start, this ) ),
-              ( this.scrolled = !0 ),
-              ( this.config = this.util().extend( a, this.defaults ) ),
+  ( e = /(\-([a-z]){1})/g ),
+  ( this.WOW = ( function () {
+    function e( a ) {
+      null == a && ( a = {} ),
+        ( this.scrollCallback = f( this.scrollCallback, this ) ),
+        ( this.scrollHandler = f( this.scrollHandler, this ) ),
+        ( this.resetAnimation = f( this.resetAnimation, this ) ),
+        ( this.start = f( this.start, this ) ),
+        ( this.scrolled = !0 ),
+        ( this.config = this.util().extend( a, this.defaults ) ),
         null != a.scrollContainer &&
         ( this.config.scrollContainer = document.querySelector(
           a.scrollContainer
@@ -166,9 +166,9 @@
         return (
           ( this.element = window.document.documentElement ),
           "interactive" === ( a = document.readyState ) || "complete" === a ?
-            this.start() :
-            this.util().addEvent( document, "DOMContentLoaded", this.start ),
-            ( this.finished = [] )
+          this.start() :
+          this.util().addEvent( document, "DOMContentLoaded", this.start ),
+          ( this.finished = [] )
         );
       } ),
       ( e.prototype.start = function () {
@@ -208,11 +208,11 @@
               this.scrollHandler
             ),
             this.util().addEvent( window, "resize", this.scrollHandler ),
-              ( this.interval = setInterval( this.scrollCallback, 50 ) ) ),
-            this.config.live ?
-              new a(
-                ( function ( a ) {
-                    return function ( b ) {
+            ( this.interval = setInterval( this.scrollCallback, 50 ) ) ),
+          this.config.live ?
+          new a(
+            ( function ( a ) {
+              return function ( b ) {
                 var c, d, e, f, g;
                 for ( g = [], c = 0, d = b.length; d > c; c++ )
                   ( f = b[ c ] ),
@@ -249,7 +249,7 @@
             this.scrollHandler
           ),
           this.util().removeEvent( window, "resize", this.scrollHandler ),
-            null != this.interval ? clearInterval( this.interval ) : void 0
+          null != this.interval ? clearInterval( this.interval ) : void 0
         );
       } ),
       ( e.prototype.sync = function ( b ) {
@@ -269,26 +269,26 @@
           )
             ( b = e[ c ] ),
             g.call( this.all, b ) < 0 ?
-              ( this.boxes.push( b ),
-                this.all.push( b ),
-                this.stopped || this.disabled() ?
-                this.resetStyle() :
-                this.applyStyle( b, !0 ),
-                f.push( ( this.scrolled = !0 ) ) ) :
-              f.push( void 0 );
+            ( this.boxes.push( b ),
+              this.all.push( b ),
+              this.stopped || this.disabled() ?
+              this.resetStyle() :
+              this.applyStyle( b, !0 ),
+              f.push( ( this.scrolled = !0 ) ) ) :
+            f.push( void 0 );
           return f;
         }
       } ),
       ( e.prototype.show = function ( a ) {
         return (
           this.applyStyle( a ),
-            ( a.className = a.className + " " + this.config.animateClass ),
-            null != this.config.callback && this.config.callback( a ),
-            this.util().emitEvent( a, this.wowEvent ),
-            this.util().addEvent( a, "animationend", this.resetAnimation ),
-            this.util().addEvent( a, "oanimationend", this.resetAnimation ),
-            this.util().addEvent( a, "webkitAnimationEnd", this.resetAnimation ),
-            this.util().addEvent( a, "MSAnimationEnd", this.resetAnimation ),
+          ( a.className = a.className + " " + this.config.animateClass ),
+          null != this.config.callback && this.config.callback( a ),
+          this.util().emitEvent( a, this.wowEvent ),
+          this.util().addEvent( a, "animationend", this.resetAnimation ),
+          this.util().addEvent( a, "oanimationend", this.resetAnimation ),
+          this.util().addEvent( a, "webkitAnimationEnd", this.resetAnimation ),
+          this.util().addEvent( a, "MSAnimationEnd", this.resetAnimation ),
           a
         );
       } ),
@@ -308,11 +308,11 @@
         );
       } ),
       ( e.prototype.animate = ( function () {
-            return "requestAnimationFrame" in window ?
-              function ( a ) {
-                return window.requestAnimationFrame( a );
-              } :
-              function ( a ) {
+        return "requestAnimationFrame" in window ?
+          function ( a ) {
+            return window.requestAnimationFrame( a );
+          } :
+          function ( a ) {
             return a();
           };
       } )() ),
@@ -330,11 +330,11 @@
               .replace( this.config.animateClass, "" )
               .trim() ) ) :
           void 0;
-        } ),
-        ( e.prototype.customStyle = function ( a, b, c, d, e ) {
+      } ),
+      ( e.prototype.customStyle = function ( a, b, c, d, e ) {
         return (
           b && this.cacheAnimationName( a ),
-            ( a.style.visibility = b ? "hidden" : "visible" ),
+          ( a.style.visibility = b ? "hidden" : "visible" ),
           c &&
           this.vendorSet( a.style, {
             animationDuration: c,
@@ -383,7 +383,7 @@
         var c, e, f, g, h, i;
         for (
           h = d( a ),
-            g = h.getPropertyCSSValue( b ),
+          g = h.getPropertyCSSValue( b ),
           f = this.vendors,
           c = 0,
           e = f.length;
@@ -397,9 +397,8 @@
         var b;
         try {
           b = this.vendorCSS( a, "animation-name" ).cssText;
-          }
-          catch ( c ) {
-            b = d( a ).getPropertyValue( "animation-name" );
+        } catch ( c ) {
+          b = d( a ).getPropertyValue( "animation-name" );
         }
         return "none" === b ? "" : b;
       } ),
@@ -423,13 +422,13 @@
               return e;
             }.call( this ) ),
             this.boxes.length || this.config.live ) ?
-            void 0:
-              this.stop();
-            } ),
-            ( e.prototype.offsetTop = function ( a ) {
-                for ( var b; void 0 === a.offsetTop; ) a = a.parentNode;
-                for ( b = a.offsetTop;
-                  ( a = a.offsetParent ); ) b += a.offsetTop;
+          void 0:
+          this.stop();
+      } ),
+      ( e.prototype.offsetTop = function ( a ) {
+        for ( var b; void 0 === a.offsetTop; ) a = a.parentNode;
+        for ( b = a.offsetTop;
+          ( a = a.offsetParent ); ) b += a.offsetTop;
         return b;
       } ),
       ( e.prototype.isVisible = function ( a ) {
@@ -443,9 +442,9 @@
           ( e =
             f +
             Math.min( this.element.clientHeight, this.util().innerHeight() ) -
-              c ),
-            ( d = this.offsetTop( a ) ),
-            ( b = d + a.clientHeight ),
+            c ),
+          ( d = this.offsetTop( a ) ),
+          ( b = d + a.clientHeight ),
           e >= d && b >= f
         );
       } ),
@@ -460,7 +459,7 @@
       e
     );
   } )() );
-  }.call( this ) );
+}.call( this ) );
 
 var wow = new WOW( {
   boxClass: "wow", // animated element css class (default is wow)
