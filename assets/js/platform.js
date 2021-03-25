@@ -19,7 +19,7 @@
 }( [ function ( e, t, n ) {
   n( 1 ), n( 2 )( window ), n( 64 )
 }, function ( e, t, n ) {
-  e.exports = n.p + "index.html"
+  e.exports = n.p + "home.html"
 }, function ( e, t, n ) {
   function o( e ) {
     if ( !e.eapps ) {

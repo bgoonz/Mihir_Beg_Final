@@ -844,9 +844,9 @@ Feel free to reach out to provide feedback, bug reports, or anything else :) .
 │   ├── lookcalmspectrograph-2d.gif
 │   ├── offblack.PNG
 │   └── poster.png
-├── index.html
+├── home.html
 ├── landing-inner.html
-├── landing-outter.html
+├── index.html
 ├── media.html
 ├── mp3
 │   └── Look Calm.mp3
